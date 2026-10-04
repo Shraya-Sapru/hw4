@@ -1,0 +1,53 @@
+[
+  {
+    "timestamp": "2026-10-04T06:40:55.599240+00:00",
+    "conversation_id": "d608b53e971a42909cde852b9bc1cc80",
+    "event": "tool_call",
+    "tool_name": "search_products",
+    "summary": {
+      "args": {
+        "query": "hoodies"
+      },
+      "result": {
+        "query": "hoodies",
+        "found": true,
+        "matches": [
+          {
+            "product_id": "basic-hoodie-big-yale",
+            "name": "Basic Hoodie Big Yale",
+            "price": 68.0,
+            "image_url": "/media/products/basic-hoodie-big-yale.jpg",
+            "description": "Navy pullover hoodie with a front kangaroo pocket, drawstrin\u2026"
+          },
+          {
+            "product_id": "brooks-brothers-double-knit-full-zip-hoodie-yale",
+            "name": "Brooks Brothers Double Knit Full Zip Hoodie Yale",
+            "price": 88.0,
+            "image_url": "/media/products/brooks-brothers-double-knit-full-zip-hoodie-\u2026",
+            "description": "Navy Brooks Brothers double-knit full-zip hoodie with drawst\u2026"
+          },
+          {
+            "product_id": "champion-full-zip-hood",
+            "name": "Champion Full Zip Hood",
+            "price": 88.0,
+            "image_url": "/media/products/champion-full-zip-hood.jpg",
+            "description": "Charcoal gray Champion full-zip hoodie with drawstring hood,\u2026"
+          },
+          "\u2026(+5 more)"
+        ]
+      }
+    },
+    "stop_reason": null
+  },
+  {
+    "timestamp": "2026-10-04T06:41:01.287021+00:00",
+    "conversation_id": "d608b53e971a42909cde852b9bc1cc80",
+    "event": "run_summary",
+    "tool_name": null,
+    "summary": {
+      "requests": 2,
+      "tool_calls": 1
+    },
+    "stop_reason": "completed"
+  }
+]
