@@ -1,0 +1,11 @@
+.mascot--bounce {
+  animation: cc-bounce 2.4s ease-in-out infinite;
+}
+
+.mascot__paw {
+  display: inline-block;
+}
+
+.mascot__paw--wave {
+  animation: cc-wave 1.6s ease-in-out infinite;
+}

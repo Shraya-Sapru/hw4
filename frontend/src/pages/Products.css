@@ -1,0 +1,148 @@
+.products-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.products-page__header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.products-page__header h1 {
+  font-family: var(--cc-font-display);
+  font-weight: 600;
+  color: var(--cc-navy);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  margin: 0 0 0.4rem;
+}
+
+.products-page__header p {
+  color: var(--cc-text-muted);
+  margin: 0;
+}
+
+.products-page__status {
+  text-align: center;
+  color: var(--cc-text-muted);
+  padding: 2rem 0;
+}
+
+.products-page__status--error {
+  color: #b3261e;
+}
+
+.products-page__clear {
+  margin-top: 0.8rem;
+  background: none;
+  border: 1px solid var(--cc-navy);
+  color: var(--cc-navy);
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.products-page__clear:hover {
+  background-color: var(--cc-cream);
+}
+
+.products-page__clear-inline {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--cc-navy);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.products-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.products-page__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: var(--cc-cream);
+  border-radius: 12px;
+}
+
+.products-page__search {
+  flex: 1 1 200px;
+  min-width: 0;
+  border: 1px solid var(--cc-border);
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.products-page__select {
+  flex: 0 1 180px;
+  min-width: 140px;
+  border: 1px solid var(--cc-border);
+  border-radius: 8px;
+  padding: 0.55rem 0.6rem;
+  font-size: 0.9rem;
+  background-color: var(--cc-white);
+}
+
+.products-page__price-range {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 0 1 auto;
+}
+
+.products-page__price-range label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--cc-text-muted);
+  white-space: nowrap;
+}
+
+.products-page__price-range input {
+  width: 70px;
+  border: 1px solid var(--cc-border);
+  border-radius: 8px;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.products-page__filters .products-page__clear {
+  margin-top: 0;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 640px) {
+  .products-page__filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .products-page__search,
+  .products-page__select,
+  .products-page__price-range,
+  .products-page__filters .products-page__clear {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .products-page__price-range {
+    justify-content: space-between;
+  }
+
+  .products-page__price-range input {
+    width: 100%;
+  }
+}

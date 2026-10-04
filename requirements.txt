@@ -1,0 +1,9 @@
+python-dotenv
+fastapi
+uvicorn[standard]
+pyjwt
+email-validator
+pydantic
+pydantic-ai
+openai
+filelock

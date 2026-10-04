@@ -1,0 +1,97 @@
+.catalogue-card {
+  background-color: var(--cc-white);
+  border: 1px solid var(--cc-border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.catalogue-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(13, 27, 76, 0.16);
+  border-color: var(--cc-gold);
+}
+
+.catalogue-card__image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-color: var(--cc-cream);
+  overflow: hidden;
+}
+
+/* A gentle light sweep across the image on hover — scoped to the image
+   only, so it never crosses over the name/price text below. */
+.catalogue-card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transform: translateX(-150%) skewX(-15deg);
+  pointer-events: none;
+}
+
+.catalogue-card:hover .catalogue-card__image::after {
+  animation: cc-shine 0.9s ease;
+}
+
+.catalogue-card__sparkle {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  color: var(--cc-gold);
+  font-size: 1.1rem;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.catalogue-card:hover .catalogue-card__sparkle {
+  animation: cc-sparkle 0.9s ease;
+}
+
+.catalogue-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.catalogue-card__body {
+  padding: 1rem 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.catalogue-card__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cc-navy);
+  margin: 0;
+}
+
+.catalogue-card__description {
+  font-size: 0.85rem;
+  color: var(--cc-text-muted);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.catalogue-card__price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--cc-navy);
+  margin: 0.2rem 0 0;
+}

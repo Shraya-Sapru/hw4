@@ -1,0 +1,141 @@
+:root {
+  --cc-navy: #0d1b4c;
+  --cc-navy-dark: #081334;
+  --cc-white: #ffffff;
+  --cc-cream: #f4f3ee;
+  --cc-border: #e3e1d9;
+  --cc-text: #1f2430;
+  --cc-text-muted: #5b6072;
+
+  /* Warm accent — gold, paired against the navy for a "varsity" feel
+     without implying any specific school's trademarked colors. */
+  --cc-gold: #f2a541;
+  --cc-gold-dark: #d98c1f;
+
+  --cc-font-display: "Fredoka", "Segoe UI", system-ui, sans-serif;
+  --cc-font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  color-scheme: light;
+  font-family: var(--cc-font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cc-white);
+  color: var(--cc-text);
+}
+
+a {
+  color: inherit;
+}
+
+/* Browsers give form controls their own default UI font instead of
+   inheriting the page's — without this, every input/select/button
+   (the Products page filter bar included) quietly falls back to the
+   OS's system font instead of matching the rest of the site. */
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--cc-font-display);
+}
+
+/* --- shared motion utilities ------------------------------------------- */
+
+@keyframes cc-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes cc-wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-18deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes cc-sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cc-shine {
+  0% {
+    transform: translateX(-120%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-15deg);
+  }
+}
+
+@keyframes cc-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cc-typing-dot {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* Anyone who's asked their OS/browser for reduced motion gets everything
+   turned off (or reduced to an instant, non-animated state) — this is a
+   blanket rule so no individual component has to remember to check. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

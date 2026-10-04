@@ -1,0 +1,34 @@
+# Secrets
+.env
+
+# Data pack (database + product images) — not committed; see README for how
+# to place this after cloning. Includes the original zip it was unpacked from.
+data/
+data.zip
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend build output
+node_modules/
+frontend/dist/
+frontend/build/
+
+# Editor / tool local config
+.claude/
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# output/ is intentionally NOT ignored — app_check.html, design.md,
+# harness.md, usability.md, and audit_trail.json are project deliverables.
